@@ -1,4 +1,11 @@
 ProControl::Application.routes.draw do
+  #get "config/index"
+
+  resources :garmenttypes
+
+  match '/config', :to => 'config#index'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +55,7 @@ ProControl::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+   root :to => "config#index"
 
   # See how all your routes lay out with "rake routes"
 
