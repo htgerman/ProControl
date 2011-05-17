@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <span class="itemtitle"><%= @garmenttype.name %></span>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @garmenttype.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_garmenttype_path(@garmenttype) %> |
+<%= link_to 'Back', config_path %>

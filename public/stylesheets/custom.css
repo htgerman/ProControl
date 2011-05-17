@@ -1,0 +1,45 @@
+body {
+    background-color: #ccccff;
+}
+
+.container{
+    background-color: #ffffff;
+}
+
+.box{    
+    background-color: #efeffa;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-right-color: #ccccff;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #ccccff;
+}
+
+h1{
+    font-family: Geneva,Arial,Helvetica,sans-serif;
+    font-size: 36px;
+    color: #990000;
+    padding-top:20px;
+}
+h2{
+
+    font-family: Geneva,Arial,Helvetica,sans-serif;
+    color: #6666ff;
+}
+
+#nav{
+    padding-left: 30px;
+}
+
+#nav ul{
+    list-style-type: none;
+}
+
+.centered{
+    text-align: center;
+}
+
+.itemtitle{
+    color: #990000;
+}
