@@ -10,9 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110517160758) do
+ActiveRecord::Schema.define(:version => 20110517182611) do
 
   create_table "clientsources", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "expensetypes", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at"

@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <span class="itemtitle"><%= @expensetype.name %></span>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @expensetype.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_expensetype_path(@expensetype) %> |
+<%= link_to 'New Expense Type', new_expensetype_path %> |
+<%= link_to 'Back', config_path %>

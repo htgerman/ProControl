@@ -1,4 +1,6 @@
 ProControl::Application.routes.draw do
+  resources :expensetypes
+
   resources :clientsources
 
   #get "config/index"
