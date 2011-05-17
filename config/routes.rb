@@ -1,4 +1,6 @@
 ProControl::Application.routes.draw do
+  resources :clientsources
+
   #get "config/index"
 
   resources :garmenttypes

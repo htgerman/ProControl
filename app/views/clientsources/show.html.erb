@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <span class="itemtitle"><%= @clientsource.name %></span>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @clientsource.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_clientsource_path(@clientsource) %> |
+<%= link_to 'New Client Source', new_clientsource_path %> |
+<%= link_to 'Back', config_path %>

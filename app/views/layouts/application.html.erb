@@ -2,8 +2,12 @@
 <html>
 <head>
   <title>ProControl</title>
-  <%= render 'layouts/stylesheets' %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <%= javascript_include_tag :all, :cache => true %>
+  <%= render 'layouts/stylesheets' %> 
   <%= csrf_meta_tag %>
 </head>
 <body>
