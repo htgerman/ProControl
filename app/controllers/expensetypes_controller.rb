@@ -76,7 +76,7 @@ class ExpensetypesController < ApplicationController
     @expensetype.destroy
 
     respond_to do |format|
-      format.html { redirect_to(expensetypes_url) }
+      format.html { redirect_to(config_url) }
       format.xml  { head :ok }
     end
   end

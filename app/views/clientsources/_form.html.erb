@@ -1,7 +1,7 @@
 <%= form_for(@clientsource) do |f| %>
   <% if @clientsource.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@clientsource.errors.count, "error") %> prohibited this clientsource from being saved:</h2>
+      <h2><%= pluralize(@clientsource.errors.count, "error") %> prohibited this client source from being saved:</h2>
 
       <ul>
       <% @clientsource.errors.full_messages.each do |msg| %>

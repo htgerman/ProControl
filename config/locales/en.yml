@@ -2,4 +2,16 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      dummy:
+        create: "Add %{model}" #to remember the syntax
+      clientsource:
+        create: "Create Client Source"
+        update: "Update Client Source"
+      expensetype:
+        create: "Create Expense Type"
+        update: "Update Expense Type"
+      garmenttype:
+        create: "Create Garment Type"
+        update: "Update Garment Type"
