@@ -43,3 +43,15 @@ h2{
 .itemtitle{
     color: #990000;
 }
+
+.itemtitle a{
+    color: #990000;
+}
+
+.itemtitle a:hover{
+    color: #6666ff;
+}
+
+.descr_list {
+    width:400px;
+}

@@ -3,7 +3,7 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
+    <th class="descr_list">Description</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,10 +11,8 @@
 
 <% @clientsources.each do |clientsource| %>
   <tr>
-    <td><span class="itemtitle"><%= clientsource.name %></span></td>
-    <td><%= clientsource.description %></td>
-    <td><%= link_to 'Show', clientsource %></td>
-    <td><%= link_to 'Edit', edit_clientsource_path(clientsource) %></td>
+    <td><span class='itemtitle'><%= link_to "#{clientsource.name}", edit_clientsource_path(clientsource) %></span></td>
+    <td class="descr_list"><%= clientsource.description %></td>
     <td><%= link_to 'Delete', clientsource, :confirm => "Deleting #{clientsource.name}. Are you sure?", :method => :delete %></td>
   </tr>
 <% end %>

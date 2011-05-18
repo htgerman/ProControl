@@ -1,9 +1,10 @@
 <h2>Garment Types</h2>
 
+
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
+    <th class="descr_list">Description</th>
     <th></th>
     <th></th>
     <th></th>
@@ -11,10 +12,8 @@
 
 <% @garmenttypes.each do |garmenttype| %>
   <tr>
-    <td><span class="itemtitle"><%= garmenttype.name %></span></td>
-    <td><%= garmenttype.description %></td>
-    <td><%= link_to 'Show', garmenttype %></td>
-    <td><%= link_to 'Edit', edit_garmenttype_path(garmenttype) %></td>
+    <td><span class="itemtitle"><%= link_to "#{garmenttype.name}", edit_garmenttype_path(garmenttype) %></span></td>
+    <td class="descr_list"><%= garmenttype.description %></td>
     <td><%= link_to 'Delete', garmenttype, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -23,3 +22,4 @@
 <br />
 
 <%= link_to 'New Garment Type', new_garmenttype_path %>
+
