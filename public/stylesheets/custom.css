@@ -55,3 +55,6 @@ h2{
 .descr_list {
     width:400px;
 }
+
+textarea {width:600px;height:200px;padding:5px;}
+

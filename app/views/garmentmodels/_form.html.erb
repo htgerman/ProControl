@@ -1,0 +1,42 @@
+<%= form_for(@garmentmodel) do |f| %>
+  <% if @garmentmodel.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@garmentmodel.errors.count, "error") %> prohibited this garmentmodel from being saved:</h2>
+
+      <ul>
+      <% @garmentmodel.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :shortdescription %><br />
+    <%= f.text_field :shortdescription, :size => 95 %>
+  </div>
+  <div class="field">
+    <%= f.label :garmenttype_id %><br />
+    <%= f.collection_select(:garmenttype_id,
+                            Garmenttype.all,
+                            :id,
+                            :name, {:include_blank => 'Select Garment Type'})
+    %>
+
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    € <%= f.text_field :price, :size => 10 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<h1>Garment Model</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @garmentmodel.name %>
+</p>
+
+<p>
+  <b>Garment Type:</b>
+  <%= @garmentmodel.garmenttype_name %>
+</p>
+
+<p>
+  <b>Short Description:</b>
+  <%= @garmentmodel.shortdescription %>
+</p>
+
+<p>
+  <b>Price (excl. material costs):</b>
+  €<%= @garmentmodel.price %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @garmentmodel.description %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_garmentmodel_path(@garmentmodel) %> |
+<%= link_to 'Back', garmentmodels_path %>

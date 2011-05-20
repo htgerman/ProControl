@@ -1,0 +1,27 @@
+<h1>Ready-Made Garment Models</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Garment Type</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @garmentmodels.each do |garmentmodel| %>
+  <tr>
+    <td><span class='itemtitle'><%= link_to "#{garmentmodel.name}", garmentmodel %></span></td>    
+    <td><%= garmentmodel.shortdescription %></td>
+    <td>€ <%= garmentmodel.price %></td>
+    <td><%= garmentmodel.garmenttype_name %></td>
+    <td><%= link_to 'Edit', edit_garmentmodel_path(garmentmodel) %></td>
+    <td><%= link_to 'Delete', garmentmodel, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Garmentmodel', new_garmentmodel_path %>

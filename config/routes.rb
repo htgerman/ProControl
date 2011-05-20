@@ -1,4 +1,6 @@
 ProControl::Application.routes.draw do
+  resources :garmentmodels
+
   resources :expensetypes
 
   resources :clientsources
