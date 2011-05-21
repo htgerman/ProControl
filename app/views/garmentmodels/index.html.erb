@@ -1,5 +1,14 @@
 <h1>Ready-Made Garment Models</h1>
 
+<%= form_tag garmentmodels_path, :method => :get do %>
+  <%= select_tag(:garmenttype_id, options_from_collection_for_select( @garmenttypes, :id, :name)) %>
+  <%= submit_tag "Filter" %>
+<% end %>
+
+<% if @garmenttype %>
+<h2>Garment Type: <%= @garmenttype.name %></h2>
+<% end %>
+
 <table>
   <tr>
     <th>Name</th>

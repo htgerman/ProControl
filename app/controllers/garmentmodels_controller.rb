@@ -2,7 +2,15 @@ class GarmentmodelsController < ApplicationController
   # GET /garmentmodels
   # GET /garmentmodels.xml
   def index
+    
     @garmentmodels = Garmentmodel.all
+    #Garmenttypes for selection in Filter
+    @garmenttypes = Garmenttype.ingarmentmodels
+    #Filter by Garmenttype
+    if params[:garmenttype_id]
+      @garmentmodels = Garmentmodel.find_all_by_garmenttype_id( params[:garmenttype_id]).sort_by{ |k| k['name'] }
+      @garmenttype = Garmenttype.find(params[:garmenttype_id])
+    end
 
     respond_to do |format|
       format.html # index.html.erb
