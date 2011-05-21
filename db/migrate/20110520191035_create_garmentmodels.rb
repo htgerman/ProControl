@@ -3,7 +3,9 @@ class CreateGarmentmodels < ActiveRecord::Migration
     create_table :garmentmodels do |t|
       t.string :name
       t.text :description
+      t.string :shortdescription
       t.float :price
+      t.integer :garmenttype_id
 
       t.timestamps
     end
