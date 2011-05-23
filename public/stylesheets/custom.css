@@ -58,3 +58,6 @@ h2{
 
 textarea {width:600px;height:200px;padding:5px;}
 
+.img_thumb img{
+    width: 100px;
+}

@@ -4,17 +4,21 @@
   <tr>
     <th>Title</th>       
     <th>Attachment</th>
-    <th></th>
+    <th>Belongs to</th>
   </tr>
 
 <% @notes.each do |note| %>
   <tr>
     <td><span class='itemtitle'><%= link_to "#{note.title}", note %></span></td>
     <td>
-    <%= link_to note.att.original_filename, note.att.url if note.att? %>
-    </td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Delete', note, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% if note.att? %>
+        <% if note.att_is_image %>
+          <%= link_to(image_tag(note.att.url, :width => "100"), note.att.url, :class => "top_up") %>
+        <% else %>
+          <%= link_to note.att.original_filename, note.att.url, :target => "_blank" %>
+        <% end %>
+      <% end %>    
+    </td>    
   </tr>
 <% end %>
 </table>

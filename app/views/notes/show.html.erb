@@ -1,9 +1,8 @@
 <h1>Note</h1>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @note.title %>
+<p>  
+<h2><%= @note.title %></h2>
 </p>
 
 <p>  
@@ -11,16 +10,18 @@
 </p>
 
 <% if @note.att.exists? %>
-  <p>
-      <b>Attachment:</b>
-      <%=  image_tag @note.att.url if @note.att.content_type == "image/pjpeg" %>
-      <%= link_to @note.att.original_filename, @note.att.url %>
+  <p>      
+      <% if @note.att_is_image %>        
+        <%= link_to(image_tag(@note.att.url, :width => "300"), @note.att.url, :class => "top_up") %>
+      <% else %>
+        <b>Attachment:</b>
+        <%= link_to @note.att.original_filename, @note.att.url, :target => "_blank" %>
+      <% end %>      
   </p>
 <% end %>
 
+<p>Last modified: <%= I18n.l @note.updated_at, :format => :short %></p>
 
+<%= link_to 'Edit', edit_note_path(@note) %> | <%= link_to 'Back', notes_path %> <br /><br />
+<%= link_to 'Delete', @note, :confirm => 'Are you sure?', :method => :delete %>
 
-
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>

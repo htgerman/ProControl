@@ -5,8 +5,9 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  
-  <%= javascript_include_tag :all %>
+  <%= javascript_include_tag "http://gettopup.com/releases/latest/top_up-min.js" %>
+  <%= javascript_include_tag :all, :cache => true %>
+
   <%= render 'layouts/stylesheets' %> 
   <%= csrf_meta_tag %>
 </head>

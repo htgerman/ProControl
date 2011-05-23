@@ -6,5 +6,7 @@ class Note < ActiveRecord::Base
 
   has_attached_file :att
   
-
+  def att_is_image
+    self.att != nil && self.att.content_type == "image/pjpeg"
+  end
 end
