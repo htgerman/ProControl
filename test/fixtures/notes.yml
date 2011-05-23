@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  content: MyText
+  noteable_id: 1
+  noteable_type: MyString
+  att_file_name: MyString
+  att_content_type: MyString
+  att_file_size: 1
+  att_updated_at: 2011-05-23 11:05:19
+
+two:
+  title: MyString
+  content: MyText
+  noteable_id: 1
+  noteable_type: MyString
+  att_file_name: MyString
+  att_content_type: MyString
+  att_file_size: 1
+  att_updated_at: 2011-05-23 11:05:19

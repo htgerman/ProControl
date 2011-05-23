@@ -1,0 +1,26 @@
+<h1>Note</h1>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @note.title %>
+</p>
+
+<p>  
+  <%= @note.content %>
+</p>
+
+<% if @note.att.exists? %>
+  <p>
+      <b>Attachment:</b>
+      <%=  image_tag @note.att.url if @note.att.content_type == "image/pjpeg" %>
+      <%= link_to @note.att.original_filename, @note.att.url %>
+  </p>
+<% end %>
+
+
+
+
+
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

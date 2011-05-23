@@ -7,6 +7,8 @@ gem 'rails', '3.0.6'
 
 gem 'sqlite3'
 
+gem "paperclip", "~> 2.3"
+
 group :production do
   gem "pg" 
 end

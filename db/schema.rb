@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110520202556) do
+ActiveRecord::Schema.define(:version => 20110523090518) do
 
   create_table "clientsources", :force => true do |t|
     t.string   "name"
@@ -39,6 +39,19 @@ ActiveRecord::Schema.define(:version => 20110520202556) do
   create_table "garmenttypes", :force => true do |t|
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notes", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "noteable_id"
+    t.string   "noteable_type"
+    t.string   "att_file_name"
+    t.string   "att_content_type"
+    t.integer  "att_file_size"
+    t.datetime "att_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

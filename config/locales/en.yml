@@ -15,3 +15,9 @@ en:
       garmenttype:
         create: "Create Garment Type"
         update: "Update Garment Type"
+      garmentmodel:
+        create: "Create Garment Model"
+        update: "Update Garment Model"
+      note:
+        create: "Create Note"
+        update: "Update Note"
