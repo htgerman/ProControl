@@ -1,5 +1,7 @@
 <h1>Ready-Made Garment Models</h1>
 
+<p><%= link_to 'New Garmentmodel', new_garmentmodel_path %></p>
+
 <%= form_tag garmentmodels_path, :method => :get do %>
   <%= select_tag(:garmenttype_id, options_from_collection_for_select( @garmenttypes, :id, :name)) %>
   <%= submit_tag "Filter" %>
@@ -33,4 +35,4 @@
 
 <br />
 
-<%= link_to 'New Garmentmodel', new_garmentmodel_path %>
+

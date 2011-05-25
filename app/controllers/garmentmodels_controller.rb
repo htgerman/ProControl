@@ -3,7 +3,7 @@ class GarmentmodelsController < ApplicationController
   # GET /garmentmodels.xml
   def index
     
-    @garmentmodels = Garmentmodel.all
+    @garmentmodels = Garmentmodel.order("updated_at desc")
     #Garmenttypes for selection in Filter
     @garmenttypes = Garmenttype.ingarmentmodels
     #Filter by Garmenttype
@@ -23,6 +23,7 @@ class GarmentmodelsController < ApplicationController
   def show
     @garmentmodel = Garmentmodel.find(params[:id])
     @noteable = @garmentmodel
+   
     
     respond_to do |format|
       format.html # show.html.erb

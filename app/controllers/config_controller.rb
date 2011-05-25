@@ -1,8 +1,8 @@
 class ConfigController < ApplicationController
   def index
-    @expensetypes = Expensetype.all
-    @garmenttypes = Garmenttype.all
-    @clientsources = Clientsource.all
+    @expensetypes = Expensetype.order("name asc")
+    @garmenttypes = Garmenttype.order("name asc")
+    @clientsources = Clientsource.order("name asc")
   end
 
 end
