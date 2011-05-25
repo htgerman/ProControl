@@ -1,27 +1,31 @@
 <h1>Note</h1>
+<%if @note.noteable%>
+  Belongs to: <%= link_to "#{@note.noteable.name}", @note.noteable %> (<%= @note.noteable.type  %> )
+<% end %>
 <p id="notice"><%= notice %></p>
 
-<p>  
+<p>
 <h2><%= @note.title %></h2>
 </p>
 
-<p>  
+<p>
   <%= @note.content %>
 </p>
 
 <% if @note.att.exists? %>
-  <p>      
-      <% if @note.att_is_image %>        
-        <%= link_to(image_tag(@note.att.url, :width => "300"), @note.att.url, :class => "top_up") %>
+  <p>
+      <% if @note.att_is_image %>
+        <%= link_to(image_tag(@note.att.url, :width => "200"), @note.att.url, :class => "top_up") %>
       <% else %>
         <b>Attachment:</b>
         <%= link_to @note.att.original_filename, @note.att.url, :target => "_blank" %>
-      <% end %>      
+      <% end %>
   </p>
 <% end %>
 
 <p>Last modified: <%= I18n.l @note.updated_at, :format => :short %></p>
 
-<%= link_to 'Edit', edit_note_path(@note) %> | <%= link_to 'Back', notes_path %> <br /><br />
-<%= link_to 'Delete', @note, :confirm => 'Are you sure?', :method => :delete %>
+<%= link_to 'Edit', edit_note_path(@note) %> | <%= link_to 'View All', notes_path %> - - - - - <%= link_to 'Delete', @note, :confirm => 'Are you sure?', :method => :delete %>
+
+
 

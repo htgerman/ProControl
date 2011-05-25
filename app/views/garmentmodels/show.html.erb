@@ -26,8 +26,14 @@
   <%= @garmentmodel.description %>
 </p>
 
-
-
-
 <%= link_to 'Edit', edit_garmentmodel_path(@garmentmodel) %> |
-<%= link_to 'Back', garmentmodels_path %>
+<%= link_to 'View All', garmentmodels_path %>
+
+<h2>Notes</h2>
+
+    <%=render @garmentmodel.notes %>   
+    <%=render 'notes/note_withparent_form'%>
+
+
+
+

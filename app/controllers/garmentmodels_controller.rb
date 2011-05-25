@@ -22,6 +22,7 @@ class GarmentmodelsController < ApplicationController
   # GET /garmentmodels/1.xml
   def show
     @garmentmodel = Garmentmodel.find(params[:id])
+    @noteable = @garmentmodel
     
     respond_to do |format|
       format.html # show.html.erb

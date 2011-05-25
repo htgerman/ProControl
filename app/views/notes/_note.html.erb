@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<h3><%= note.title %></h3>
+</p>
+
+<p>
+  <%= note.content %>
+</p>
+
+<% if note.att.exists? %>
+  <p>
+      <% if note.att_is_image %>
+        <%= link_to(image_tag(note.att.url, :width => "300"), note.att.url, :class => "top_up") %>
+      <% else %>
+        <b>Attachment:</b>
+        <%= link_to note.att.original_filename, note.att.url, :target => "_blank" %>
+      <% end %>
+  </p>
+<% end %>
+
+<p>Last modified: <%= I18n.l note.updated_at, :format => :short %></p>
+
+<%= link_to 'Edit', edit_note_path(note) %> - - - - - <%= link_to 'Delete', note,  :confirm => 'Are you sure?', :method => :delete %>
+<hr />

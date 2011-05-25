@@ -2,6 +2,10 @@ ProControl::Application.routes.draw do
   resources :notes
 
   resources :garmentmodels
+  resources :garmentmodel do
+    resources :notes
+  end
+
 
   resources :expensetypes
 
@@ -12,6 +16,9 @@ ProControl::Application.routes.draw do
   resources :garmenttypes
 
   match '/config', :to => 'config#index'
+
+ 
+
 
 
   # The priority is based upon order of creation:
